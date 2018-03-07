@@ -4,11 +4,16 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
-      - apt-get update -y
-      - apt-get install -y apache2
+      - sudo apt update -y
+      - sudo apt-get update -y
+      - sudo apt-get install -y apache2
+      - sudo add-apt-repository ppa:jonathonf/python-3.6 -y
+      - sudo apt-get update - y
+      - sudo apt-get install python3.6 -y
       - curl -O https://bootstrap.pypa.io/get-pip.py
-      - python get-pip.py --user
+      - python3 get-pip.py --user
       - pip install awscli --upgrade --user
+      - echo Completed installation
 artifacts:
   files:
     - '**/*'
