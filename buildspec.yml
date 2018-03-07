@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -y apache2
+      - curl -O https://bootstrap.pypa.io/get-pip.py
+      - python get-pip.py --user
+      - pip install awscli --upgrade --user
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
