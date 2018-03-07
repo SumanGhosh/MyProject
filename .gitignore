@@ -1,0 +1,8 @@
+# System Files
+# -------------
+.DS_Store
+
+# Backup File
+# -----------
+*.bak
+*.bakup
