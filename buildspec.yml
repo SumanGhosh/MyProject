@@ -13,6 +13,13 @@ phases:
       - curl -O https://bootstrap.pypa.io/get-pip.py
       - python3 get-pip.py --user
       - pip install awscli --upgrade --user
+      - sudo apt update -y
+      - sudo apt-get install -y ruby
+      - sudo apt-get install -y wget
+      - wget https://aws-codedeploy-us-west-2.s3.amazonaws.com/latest/install
+      - chmod +x ./install
+      - sudo ./install auto
+      - sudo service codedeploy-agent start
       - echo Completed installation
 artifacts:
   files:
